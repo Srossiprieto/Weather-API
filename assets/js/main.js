@@ -41,7 +41,7 @@ const createCityTemplate = (city) => {
       <div class="weather-extra-container">
         <div class="weather-minmax-container">
           <span class="weather-span"><i class="fa-solid fa-arrow-up-long"></i>Max: ${temp_max}º</span>
-          <span class="weather-span"><i class="fa-solid fa-arrow-down-long"></i>Min:${temp_min}º</span>
+          <span class="weather-span"><i class="fa-solid fa-arrow-down-long"></i>Min: ${temp_min}º</span>
         </div>
         <span class="weather-humidity"> ${humidity}% Humedad</span>
       </div>
