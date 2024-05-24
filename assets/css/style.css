@@ -1,21 +1,24 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
 :root{
-    --ebony-clay-50: #f5f3fc;
-    --ebony-clay-100: #e5e3f7;
-    --ebony-clay-200: #cccaf2;
-    --ebony-clay-300: #a5a9e9;
-    --ebony-clay-400: #7d85de;
-    --ebony-clay-500: #5f69d3;
-    --ebony-clay-600: #4955c5;
-    --ebony-clay-700: #404bb5;
-    --ebony-clay-800: #394593;
-    --ebony-clay-900: #324376;
-    --ebony-clay-950: #1a2237;
-    
+
+
+      --blue-50: #f4f6fb;
+      --blue-100: #e7edf7;
+      --blue-200: #cbd9ec;
+      --blue-300: #9db8dc;
+      --blue-400: #6893c8;
+      --blue-500: #4474b3;
+      --blue-600: #335b96;
+      --blue-700: #2a4a7a;
+      --blue-800: #264066;
+      --blue-900: #243756;
+      --blue-950: #111928;
+  
+  
     
     --grey :#747f8c;
-    --bg: #1a2237;
+    --bg: #111928;
     
     
     
@@ -34,10 +37,7 @@
 
 
 body {
-  background: #1a2237;
-  /* background: linear-gradient(
-    190deg, var(--ebony-clay-400), var(--ebony-clay-600) 58%
-  ); */
+  background: var(--bg);
   height: 100%;
   color: white;
   font-family: "Poppins", sans-serif;
@@ -51,17 +51,6 @@ main {
   padding: 40px 5%;
 }
 
-.container {
-  background-color: #15202b80;
-  width: 100%;
-  max-width: 850px;
-  margin: 0 auto;
-  padding: 40px 30px;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
 
 .search-box {
   display: flex;
@@ -71,19 +60,17 @@ main {
 }
 
 .search-title {
-    font-size: 25px;
+    font-size: 35px;
     font-weight: 800;
-}
-.search-title span{
-    background: linear-gradient(to top, var(--ebony-clay-700), var(--ebony-clay-100));
-    background-clip: text;
-    color: transparent;
-    -webkit-background-clip: text;
-}
-.search-description {
+  }
+  .search-description {
     font-size: 18px;
     font-weight: 200;
-}
+  }
+  .search-title span{
+     color: var(--blue-400);
+     font-size: 55px
+  }
 
 /* Form */
 
@@ -92,16 +79,15 @@ form {
   gap: 0;
 }
 form button {
-  background-color: var(--ebony-clay-600);
+  background-color: var(--blue-400);
   outline: none;
   border: none;
-  color: var(--ebony-clay-100);
+  color: white;
   padding: 8px 10px;
   margin-right: 0;
   border-radius: 10px 0 0 10px;
 }
 form input {
-  background-color: var(--ebony-clay-100);
   outline: none;
   border: none;
   padding: 8px 200px 8px 5px;
@@ -121,18 +107,16 @@ input::placeholder {
 /* Card clima */
 .weather-card {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  background-color: rgba(34, 36, 71, 1);
-  padding: 30px;
-  border-radius: 10px;
-  position: relative;
-  flex-wrap: wrap;
-  opacity: 0;
+  gap: 20px;
+  padding: 20px;
+  background-color: #425c7c;
+  border-radius: 12px;
 }
 
 .card-container {
-  display: flex;
+  display: flex; 
   flex-direction: column;
   gap: 20px;
 }
@@ -167,7 +151,11 @@ input::placeholder {
 }
 
 .weather-st {
-  background-color: rgba(217, 217, 217, 0.1);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(17, 25, 40, 0.75);
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.125);
   padding: 5px 20px;
   border-radius: 10px;
 }
@@ -191,12 +179,12 @@ input::placeholder {
 .weather-span i {
   padding: 0 10px;
   font-size: 16px;
-  color: var(--ebony-clay-400);
+  color: var(--blue-400);
 }
 
 .weather-humidity {
-  border-top: 1px solid var(--ebony-clay-400);
-  border-bottom: 1px solid var(--ebony-clay-400);
+  border-top: 1px solid var(--blue-400);
+  border-bottom: 1px solid var(--blue-400);
   margin-block-start: 15px;
   padding: 5px 30px;
 }
@@ -205,16 +193,11 @@ footer {
   width: 100%;
   text-align: center;
   padding: 36px;
-  color: var(--ebony-clay-100);
 }
 
 footer span {
-    background: var(--ebony-clay-50);
-    background: linear-gradient(to top, var(--ebony-clay-700), var(--ebony-clay-100));
-    background-clip: text;
-    color: transparent;
-    -webkit-background-clip: text;
-    font-weight: 800
+    color: var(--blue-400);
+    font-weight: 500
 }
 
 
@@ -275,7 +258,7 @@ footer span {
   }
 
   .weather-img-container img {
-    margin: 20px 0;
+    margin: 30px 0;
     width: 100%;
   }
 }
